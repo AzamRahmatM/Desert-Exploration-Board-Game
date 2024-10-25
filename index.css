@@ -1,0 +1,154 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 555px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-panels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.player-panel {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff9f0;
+    border: 2px solid #d3a679;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.player-panel h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: #d2a679;
+}
+
+.central-panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.timer {
+    font-size: 2em;
+    padding: 10px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.cell {
+    background-color: #ac7f03;
+    aspect-ratio: 1;
+}
+.cell.oasis {
+    background-image: url('Assets/Oasis marker.png'); /* Path to your oasis image */
+    background-size: cover;
+    background-position: center;
+}
+
+.cell.mirage {
+    background-image: url('Assets/Drought.png'); /* Path to your mirage image */
+    background-size: cover;
+    background-position: center;
+}
+.cell.player {
+    background-image: url('Assets/Player.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cell.stargate {
+    background-image: url('Assets/Stargate.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.cell.hole {
+    background-image: url('Assets/Hole.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+/* .part1 {
+    background-image: url('Assets/Item 1.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.part2 {
+    background-image: url('Assets/Item 2.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.part3 {
+    background-image: url('Assets/Item 3.png');
+    background-size: cover;
+    background-position: center;
+
+} */
+.cell {
+    /* Default hidden state for cells */
+}
+.cell.part1, .cell.part2, .cell.part3 {
+    /* Only modify these if you are sure the parts should be visible */
+    display: block; /* Or however you manage visibility */
+}
+
+.cell.revealed.part1, .cell.revealed.part2, .cell.revealed.part3 {
+    display: block; /* Make parts visible when revealed */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background-color: #d2a679;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Add specific styles for cell types, buttons, and any additional elements */
